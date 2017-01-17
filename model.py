@@ -5,6 +5,7 @@ from controller import *
 from neural_net import *
 
 
+# "Add something"
 
 class Core(object):
     def __init__(self):
