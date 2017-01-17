@@ -6,6 +6,8 @@ from neural_net import *
 
 
 # "Add something"
+# "Add 2"
+
 
 class Core(object):
     def __init__(self):
