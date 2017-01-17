@@ -5,8 +5,6 @@ from controller import *
 from neural_net import *
 
 
-# Add something for the new branch
-
 
 class Core(object):
     def __init__(self):
