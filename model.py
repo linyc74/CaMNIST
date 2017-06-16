@@ -5,7 +5,6 @@ from controller import *
 from neural_net import *
 
 
-# "Add something"
 
 class Core(object):
     def __init__(self):
@@ -335,7 +334,7 @@ class CustomCamera(object):
         One cv2.VideoCapture object is instantiated.
         If not successfully instantiated, then the cv2.VideoCapture object is None.
         '''
-        self.cam_id = 1
+        self.cam_id = 0
 
         # Instantiate the cv2.VideoCapture object
         self.cam = cv2.VideoCapture(self.cam_id)
