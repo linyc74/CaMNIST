@@ -1,12 +1,12 @@
 {
 "width"        : 640 ,
 "height"       : 480 ,
-"brightness"   : 120 ,
-"contrast"     : 64  ,
+"brightness"   : 110 ,
+"contrast"     : 120 ,
 "saturation"   : 80  ,
 "hue"          : 13  ,
 "gain"         : 200 ,
-"exposure"     : -3  ,
-"white_balance": 5000,
+"exposure"     : -4  ,
+"white_balance": 4000,
 "focus"        : 0
 }

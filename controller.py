@@ -57,8 +57,8 @@ class Controller(object):
             method = getattr(self.core, method_name)
 
         except Exception as exception_inst:
-            print "The controller tries to call method '{}' in 'Core' object,".format(method_name)
-            print "but " + str(exception_inst) + '\n'
+            print("The controller tries to call method '{}' in 'Core' object,".format(method_name))
+            print("but " + str(exception_inst) + '\n')
             return
 
         if arg is None:
@@ -80,8 +80,8 @@ class Controller(object):
             getattr(self.core, method_name)
 
         except Exception as exception_inst:
-            print "The controller tries to get method '{}' in 'Core' object,".format(method_name)
-            print "but " + str(exception_inst) + '\n'
+            print("The controller tries to get method '{}' in 'Core' object,".format(method_name))
+            print("but " + str(exception_inst) + '\n')
             return None
 
         return partial(self.call_method, method_name, arg)
@@ -91,9 +91,9 @@ class Controller(object):
 class MockController(object):
     def call_method(self, method_name, arg=None):
         if arg is None:
-            print 'Core method {}() called'.format(str(method_name))
+            print('Core method {}() called'.format(str(method_name)))
         else:
-            print 'Core method {}() called with arg = {}'.format(str(method_name), str(arg))
+            print('Core method {}() called with arg = {}'.format(str(method_name), str(arg)))
 
     def get_method(self, method_name, arg=None):
         return partial(self.call_method, method_name, arg)

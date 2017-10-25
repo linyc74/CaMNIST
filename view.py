@@ -81,7 +81,7 @@ class CamnistGUI(QtGui.QMainWindow):
                 method = getattr(self, key)
                 self.actions[key].triggered.connect(method)
             except Exception as exception_inst:
-                print exception_inst
+                print(exception_inst)
 
     def open_info(self):
         if not self.info_window.isVisible():
@@ -105,6 +105,7 @@ class CamnistGUI(QtGui.QMainWindow):
         if reply == QtGui.QMessageBox.Yes:
             self.controller.call_method('close')
             self.info_window.close()
+            self.camera_tuner_window.close()
             event.accept()
 
         else:
@@ -125,8 +126,8 @@ class CamnistGUI(QtGui.QMainWindow):
             method = getattr(self, signal_name)
             self.connect(thread, QtCore.SIGNAL(signal), method)
         except Exception as exception_inst:
-            print "Try to connect PyQt signal '{}'".format(signal_name)
-            print exception_inst + '\n'
+            print("Try to connect PyQt signal '{}'".format(signal_name))
+            print(exception_inst + '\n')
 
     def progress_update(self, text_value):
         self.progress_bar.progress_update(text_value)
